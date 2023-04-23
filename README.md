@@ -88,3 +88,19 @@ test('2 + 2 = 4", () => {
     - 컨트롤러에 대한 테스트 중이니, DB가 잘 동작한다는 전제를 깔고 감
   - 기존 DB 저장 method를 mock함수로 만들고, mock함수를 호출했을때 반환 받기를 원하는 값을 직접 지정
 > 참고 : https://inpa.tistory.com/entry/JEST-%F0%9F%93%9A-%EB%AA%A8%ED%82%B9-mocking-jestfn-jestspyOn
+
+-----
+### node-mocks-http
+- 단위 테스트에서 request, response 객체를 얻기 위해 사용
+
+#### http 객체(request, response) 얻기
+```
+req = httpMocks.createRequest();
+res = httpMocks.createResponse();
+```
+
+#### req.body 설정
+```
+req.body = jsonValue;
+controller.function(req, res, next);
+```
