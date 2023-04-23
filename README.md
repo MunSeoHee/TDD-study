@@ -104,3 +104,23 @@ res = httpMocks.createResponse();
 req.body = jsonValue;
 controller.function(req, res, next);
 ```
+
+----
+### beforeEach
+- 테스트에 공통된 코드가 있다면, beforeEach안에 넣어서 반복을 줄일 수 있음
+- 하나의 describe의 테스트에서 코드가 반복된다면
+```
+describe{
+  beforeEach()
+  test()
+  test()
+}
+```
+- 모든 describe의 테스트에서 코드가 반복된다면
+```
+beforeEach()
+describe{
+  test()
+  test()
+}
+```
