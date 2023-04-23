@@ -1,3 +1,7 @@
-test("", () => {
-  expect(2 + 2).not.toBe(5);
-});
+const productController = require('../../controller/products');
+
+describe("product controller create", () => {
+  it("should have a createProduct function", () => {
+      expect(typeof productController.createProduct).toBe("function")
+  })
+})
