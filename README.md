@@ -19,5 +19,5 @@ npm test
 
 #### Run Server
 ```
-npm start server.js
+npm run start
 ```
